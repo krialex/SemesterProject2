@@ -1,9 +1,11 @@
 {
   "name": "semesterproject2",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "sass src/styles/main.scss dist/styles/main.css"
+    "build": "sass src/styles/main.scss dist/styles/main.css",
+    "test": "npm run test-unit",
+    "test-unit": "jest"
   },
   "keywords": [],
   "author": "",
