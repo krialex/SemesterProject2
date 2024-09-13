@@ -7,6 +7,7 @@
     "test": "npm run test-unit",
     "test-unit": "jest",
     "format": "prettier -w src/**/*.js",
+    "lint": "eslint src/**/*.js",
     "test:e2e": "cypress open",
     "test:e2e:headless": "cypress run"
   },
