@@ -8,6 +8,7 @@
     "test-unit": "jest",
     "format": "prettier -w src/**/*.js",
     "lint": "eslint src/**/*.js",
+    "lint-fix": "eslint src/**/*.js --cache --fix",
     "test:e2e": "cypress open",
     "test:e2e:headless": "cypress run",
     "prepare": "husky install"
@@ -25,7 +26,9 @@
     "cypress": "^13.14.2",
     "eslint": "^9.10.0",
     "globals": "^15.9.0",
+    "husky": "^9.1.6",
     "jest": "^29.7.0",
+    "lint-staged": "^15.2.10",
     "prettier": "^3.3.3"
   },
   "lint-staged": {
