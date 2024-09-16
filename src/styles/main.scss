@@ -1,12 +1,25 @@
-@import "~bootstrap/scss/bootstrap";
+//Costume variables
+$primaryFont: 'Amatic SC', sans-serif;
+$secondaryFont: 'Josefin Sans', sans-serif;
+$primary: #3a5991;
+$secondary: #146e8f;
+
+@import '../../node_modules/bootstrap/scss/bootstrap';
 
 h1 {
-    font-family: "Amatic SC", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+  font-family: $primaryFont;
+  font-weight: 400;
+  font-style: normal;
+  color: $primary;
 }
 
 body {
-    font-family: "Josefin Sans", sans-serif;
-    font-optical-sizing: auto;
+  font-family: $secondaryFont;
+  font-optical-sizing: auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
