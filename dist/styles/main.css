@@ -11851,12 +11851,30 @@ header {
   margin: 20px auto;
 }
 
+h1, .h1 {
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3a5991;
+}
+
 .search-container {
   border-bottom: 1px solid;
 }
 
-.search-input, .search-btn {
+.search-input,
+.search-btn {
   border: 0px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
 }
 
 h1, .h1 {
@@ -11869,7 +11887,10 @@ h1, .h1 {
 main {
   font-family: "Josefin Sans", sans-serif;
   font-optical-sizing: auto;
-  background-color: #FAFBFF;
+  background-color: #fafbff;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
 }
 
 /*# sourceMappingURL=main.css.map */

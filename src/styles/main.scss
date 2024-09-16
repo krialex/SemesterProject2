@@ -9,6 +9,17 @@ $secondary: #146e8f;
 @import 'header';
 @import 'search';
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
 h1 {
   font-family: $primaryFont;
   font-weight: 400;
@@ -20,4 +31,7 @@ main {
   font-family: $secondaryFont;
   font-optical-sizing: auto;
   background-color: #fafbff;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
 }

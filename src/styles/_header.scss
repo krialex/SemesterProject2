@@ -4,3 +4,10 @@ header {
   align-items: center;
   margin: 20px auto;
 }
+
+h1 {
+  font-family: $primaryFont;
+  font-weight: 400;
+  font-style: normal;
+  color: $primary;
+}
