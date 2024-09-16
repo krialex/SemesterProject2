@@ -6,6 +6,9 @@ $secondary: #146e8f;
 
 @import '../../node_modules/bootstrap/scss/bootstrap';
 
+@import 'header';
+@import 'search';
+
 h1 {
   font-family: $primaryFont;
   font-weight: 400;
@@ -13,13 +16,8 @@ h1 {
   color: $primary;
 }
 
-body {
+main {
   font-family: $secondaryFont;
   font-optical-sizing: auto;
-}
-
-header {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  background-color: #fafbff;
 }
