@@ -12,10 +12,17 @@ async function getListings() {
 
     listingsJson.data.forEach((post) => {
       let postHTML = `<div class="listing-card">
-                            <h3>${post.title}</h3>
-                            <p>Bids: ${post._count.bids}</p>
-                            <p>Description: ${post.description}</p>
-                            </div>`;
+                            <h3>${post.title}</h3>`;
+
+      if (post.media && post.media.length > 0) {
+        let imageUrl = post.media[0].url;
+        let imageAlt = post.media[0].alt || 'Listing image';
+
+        postHTML += `<img src="${imageUrl}" alt="${imageAlt}" class="listing-img">`;
+      }
+
+      postHTML += `<p>Bids: ${post._count.bids}</p>
+                         </div>`;
 
       listingContainer.innerHTML += postHTML;
     });

@@ -3,11 +3,15 @@
   margin: 20px auto;
   justify-content: center;
   max-width: 780px;
-  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
 }
 
 .listing-card {
   display: flex;
   flex-direction: column;
-  max-width: 250px;
+  width: 250px;
+  background-color: white;
+  padding: 10px;
+  align-items: center;
 }
