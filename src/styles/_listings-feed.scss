@@ -1,0 +1,13 @@
+.listings {
+  display: flex;
+  margin: 20px auto;
+  justify-content: center;
+  max-width: 780px;
+  display: flex;
+}
+
+.listing-card {
+  display: flex;
+  flex-direction: column;
+  max-width: 250px;
+}
