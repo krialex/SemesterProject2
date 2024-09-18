@@ -11871,7 +11871,7 @@ h1, .h1 {
   display: flex;
   margin: 20px auto;
   justify-content: center;
-  max-width: 780px;
+  max-width: 750px;
   flex-wrap: wrap;
   gap: 5px;
 }
@@ -11879,14 +11879,48 @@ h1, .h1 {
 .listing-card {
   display: flex;
   flex-direction: column;
-  width: 250px;
+  width: 227px;
   background-color: white;
   padding: 10px;
   align-items: center;
 }
 
+.listingsFeed-info {
+  font-size: 0.8rem;
+  margin-top: 5px;
+}
+
 .listing-img {
   width: 230px;
+}
+
+.feature-img {
+  height: 400px;
+}
+
+.errorMessage {
+  display: none;
+  color: #dc3545;
+}
+
+.login-btn {
+  display: flex;
+  gap: 5px;
+}
+
+.signout-button, .profile-icon {
+  display: none;
+}
+
+.profile-icon {
+  font-size: 2.3rem;
+  align-self: center;
+  margin-right: 10px;
+  color: #146e8f;
+}
+
+a {
+  text-decoration: none;
 }
 
 * {
@@ -11895,7 +11929,8 @@ h1, .h1 {
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -11908,6 +11943,10 @@ main {
   flex-direction: column;
   align-items: center;
   padding-top: 20px;
+}
+
+.carousel-caption h4, .carousel-caption .h4, .carousel-caption p {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 }
 
 /*# sourceMappingURL=main.css.map */

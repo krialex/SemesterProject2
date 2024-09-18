@@ -1,34 +1,53 @@
-const apiUrl = new URL('https://v2.api.noroff.dev/auction/listings/');
-const listingContainer = document.querySelector('.listings');
+import { getListings } from './api/posts/allListings.js';
+import { buildListingsHTML } from './ui/posts/listingsHtml.js';
+import { feturedListings } from './api/posts/featuredListings.js';
+import { featuredListingsHtml } from './ui/posts/featuredListingsHtml.js';
+import { initializeModals } from './events/auth/modals.js';
 
-async function getListings() {
+import '../../node_modules/bootstrap/dist/js/bootstrap.bundle.js';
+
+async function init() {
   try {
-    const respons = await fetch(apiUrl);
-    const listingsJson = await respons.json();
+    const listingsData = await getListings();
+    const allListings = listingsData.data;
+    const topListings = feturedListings(allListings);
 
-    console.log(listingsJson);
-
-    listingContainer.innerHTML = '';
-
-    listingsJson.data.forEach((post) => {
-      let postHTML = `<div class="listing-card">
-                            <h3>${post.title}</h3>`;
-
-      if (post.media && post.media.length > 0) {
-        let imageUrl = post.media[0].url;
-        let imageAlt = post.media[0].alt || 'Listing image';
-
-        postHTML += `<img src="${imageUrl}" alt="${imageAlt}" class="listing-img">`;
-      }
-
-      postHTML += `<p>Bids: ${post._count.bids}</p>
-                         </div>`;
-
-      listingContainer.innerHTML += postHTML;
-    });
+    featuredListingsHtml(topListings);
+    buildListingsHTML(listingsData);
   } catch (error) {
-    console.log('can not fetch info from api', error);
+    console.log('Failed to loade page', error);
+  }
+}
+init();
+
+initializeModals();
+
+function updateUIBasedOnLoginStatus() {
+  const loggedIn = localStorage.getItem('loggedIn') === 'true';
+  const loginButton = document.querySelector('.login-button');
+  const signinButton = document.querySelector('.signin-button');
+  const profileIcon = document.querySelector('.profile-icon');
+  const signOutButton = document.querySelector('.signout-button');
+
+  if (loggedIn) {
+    if (loginButton) loginButton.style.display = 'none';
+    if (signinButton) signinButton.style.display = 'none';
+    if (profileIcon) profileIcon.style.display = 'block';
+    if (signOutButton) signOutButton.style.display = 'block';
+  } else {
+    if (loginButton) loginButton.style.display = 'block';
+    if (signinButton) signinButton.style.display = 'block';
+    if (profileIcon) profileIcon.style.display = 'none';
+    if (signOutButton) signOutButton.style.display = 'none';
   }
 }
 
-getListings();
+// Event handler for sign out button
+document.querySelector('.signout-button')?.addEventListener('click', () => {
+  localStorage.removeItem('token');
+  localStorage.removeItem('profile');
+  localStorage.setItem('loggedIn', 'false');
+  updateUIBasedOnLoginStatus();
+});
+
+updateUIBasedOnLoginStatus();

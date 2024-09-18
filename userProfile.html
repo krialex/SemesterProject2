@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/ad221245c2.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="dist/styles/main.css" />
+    <title>HammerTime</title>
+  </head>
+  <body>
+    <header>
+      <a href="/"><h1>HammerTime</h1></a>
+      <div class="search-container">
+        <form action="">
+          <input
+            type="text"
+            placeholder="Search.."
+            name="search"
+            class="search-input"
+          />
+          <button type="submit" class="btn search-btn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+      </div>
+      <div class="login-btn">
+        <button type="submit" class="btn login-button btn-primary">
+          LogIn
+        </button>
+        <button type="submit" class="btn signin-button btn-secondary">
+          SignIn
+        </button>
+        <a href="userProfile.html"
+          ><i class="fa-solid fa-user profile-icon"></i
+        ></a>
+        <button class="btn signout-button btn-secondary">Logg ut</button>
+      </div>
+    </header>
+    <main>
+      <div class="userInfo"></div>
+      <div>
+        <h2>My listings</h2>
+      </div>
+      <section class="listings container mt-5 userProfileListings"></section>
+    </main>
+    <footer></footer>
+
+    <script src="src/js/main.js" type="module"></script>
+  </body>
+</html>

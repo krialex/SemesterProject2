@@ -10,6 +10,8 @@ $secondary: #146e8f;
 @import 'search';
 @import 'listings-feed';
 @import 'images';
+@import 'error';
+@import 'buttons';
 
 * {
   margin: 0;
@@ -31,4 +33,9 @@ main {
   flex-direction: column;
   align-items: center;
   padding-top: 20px;
+}
+
+.carousel-caption h4,
+.carousel-caption p {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 }
