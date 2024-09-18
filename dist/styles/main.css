@@ -11908,7 +11908,8 @@ h1, .h1 {
   gap: 5px;
 }
 
-.signout-button, .profile-icon {
+.signout-button,
+.profile-icon {
   display: none;
 }
 
@@ -11945,7 +11946,8 @@ main {
   padding-top: 20px;
 }
 
-.carousel-caption h4, .carousel-caption .h4, .carousel-caption p {
+.carousel-caption h4, .carousel-caption .h4,
+.carousel-caption p {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 }
 
