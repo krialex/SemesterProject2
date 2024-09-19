@@ -3,6 +3,7 @@ import { buildListingsHTML } from './ui/posts/listingsHtml.js';
 import { feturedListings } from './api/posts/featuredListings.js';
 import { featuredListingsHtml } from './ui/posts/featuredListingsHtml.js';
 import { initializeModals } from './events/auth/modals.js';
+import { getUserId } from './ui/auth/userInfo.js';
 
 import '../../node_modules/bootstrap/dist/js/bootstrap.bundle.js';
 
@@ -34,6 +35,12 @@ function updateUIBasedOnLoginStatus() {
     if (signinButton) signinButton.style.display = 'none';
     if (profileIcon) profileIcon.style.display = 'block';
     if (signOutButton) signOutButton.style.display = 'block';
+
+    const profile = JSON.parse(localStorage.getItem('profile'));
+    if (profile) {
+      getUserId(profile.name);
+      console.log(profile.name);
+    }
   } else {
     if (loginButton) loginButton.style.display = 'block';
     if (signinButton) signinButton.style.display = 'block';
