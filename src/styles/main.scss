@@ -12,6 +12,7 @@ $secondary: #146e8f;
 @import 'images';
 @import 'error';
 @import 'buttons';
+@import 'userProfile';
 
 * {
   margin: 0;
@@ -38,4 +39,10 @@ main {
 .carousel-caption h4,
 .carousel-caption p {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+.profile-img {
+  width: 80px;
+  border-radius: 50%;
+  height: 80px;
 }

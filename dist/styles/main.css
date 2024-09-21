@@ -11924,6 +11924,31 @@ a {
   text-decoration: none;
 }
 
+.user-image img {
+  width: 80px;
+  border-radius: 50%;
+  height: 80px;
+  position: relative;
+}
+
+.user-info {
+  display: flex;
+  max-width: 600px;
+  align-items: baseline;
+  gap: 40px;
+}
+
+.user-image {
+  display: flex;
+}
+
+.editImage {
+  position: absolute;
+  right: 72%;
+  top: 26%;
+  color: #3a5991;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -11949,6 +11974,12 @@ main {
 .carousel-caption h4, .carousel-caption .h4,
 .carousel-caption p {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+.profile-img {
+  width: 80px;
+  border-radius: 50%;
+  height: 80px;
 }
 
 /*# sourceMappingURL=main.css.map */

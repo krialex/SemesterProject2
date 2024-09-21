@@ -16,8 +16,6 @@ export async function getUserId() {
 
   const profileName = profile.name;
 
-  console.log('Profile Name:', profileName);
-
   try {
     const response = await fetch(GET_BASE_URL + PROFILE + `/${profileName}`, {
       headers: {
@@ -32,13 +30,16 @@ export async function getUserId() {
     }
 
     const userData = await response.json();
-    userInfo.innerHTML += `
-            <div class="user-info">
-                <img src="${userData.data.banner.url}" alt="${userData.data.banner.alt}">
-                <p>Name: ${userData.data.name}</p>
-                <p>Credits: ${userData.data.credits}</p>
-                <p>Wins: ${userData.data._count.wins}</p>
-            </div>`;
+    userInfo.innerHTML += `<div class="user-info">
+                                <div class="user-image">
+                                <img src="${userData.data.banner.url}" alt="${userData.data.banner.alt} 
+                                class="profile-img">
+                                <i class="fa-solid fa-pen-to-square editImage"></i>
+                                </div>
+                                <p>Name: ${userData.data.name}</p>
+                                <p>Credits: ${userData.data.credits}</p>
+                                <p>Wins: ${userData.data._count.wins}</p>
+                               </div>`;
 
     return userData;
   } catch (error) {
