@@ -1,5 +1,5 @@
 import { GET_BASE_URL, PROFILE, API_KEY } from '../../api/constants.js';
-//import { load } from "../localStorage/loadInfo.js";
+import { createImageModal } from '../../events/auth/createImageModal.js';
 
 const userInfo = document.querySelector('.userInfo');
 
@@ -32,55 +32,23 @@ export async function getUserId() {
     const userData = await response.json();
     userInfo.innerHTML += `<div class="user-info">
                                 <div class="user-image">
-                                <img src="${userData.data.banner.url}" alt="${userData.data.banner.alt} 
+                                <img src="${userData.data.avatar.url}" alt="${userData.data.avatar.alt} 
                                 class="profile-img">
+                                <a href="#" id="edit-avatar">
                                 <i class="fa-solid fa-pen-to-square editImage"></i>
-                                </div>
+                                </a></div>
                                 <p>Name: ${userData.data.name}</p>
                                 <p>Credits: ${userData.data.credits}</p>
                                 <p>Wins: ${userData.data._count.wins}</p>
                                </div>`;
 
+    document.querySelector('#edit-avatar').addEventListener('click', (e) => {
+      e.preventDefault();
+      createImageModal(userData.data.avatar.url);
+      document.getElementById('editAvatarModal').style.display = 'block';
+    });
     return userData;
   } catch (error) {
     console.log('Could not get user info on profile:', error);
   }
 }
-
-/*import { GET_BASE_URL, PROFILE, API_KEY } from "../../api/constants.js";
-import { load } from "../localStorage/loadInfo.js";
-
-const userInfo = document.querySelector(".userInfo");
-
-export async function getUserId(name) {
-    userInfo.innerHTML += "";
-
-    const profileName = localStorage.getItem("pofile.name");
-
-    console.log(profileName);
-    try {
-        const response = await fetch(GET_BASE_URL + PROFILE + `/` + `${profileName}`, {
-            headers: {
-                "X-Noroff-API-Key": API_KEY,
-                Authorization: `Bearer ${token}`
-            },
-            method: 'GET',
-        });
-        if(response.ok) {
-            throw new Error("Failed to fetch info on user");
-        }
-        const userData = await response.json();
-
-        userInfo.innerHTML += `<div class="user-info">
-                               <img src="${userData.data.banner.url}"
-                               alt="${userData.data.banner.alt}">
-                               <p>${userData.data.name}</p>
-                               <p>${userData.data.credits}</p>
-                               <p>${userData.data._count.wins}</p>
-                               <p>New listing</p></div>`
-        
-        return userData;
-    } catch {
-        console.log("could not get user info on profile");
-    }
-} */

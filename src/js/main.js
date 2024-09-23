@@ -23,7 +23,7 @@ init();
 
 initializeModals();
 
-function updateUIBasedOnLoginStatus() {
+function loginAndLogout() {
   const loggedIn = localStorage.getItem('loggedIn') === 'true';
   const loginButton = document.querySelector('.login-button');
   const signinButton = document.querySelector('.signin-button');
@@ -54,7 +54,7 @@ document.querySelector('.signout-button')?.addEventListener('click', () => {
   localStorage.removeItem('token');
   localStorage.removeItem('profile');
   localStorage.setItem('loggedIn', 'false');
-  updateUIBasedOnLoginStatus();
+  loginAndLogout();
 });
 
-updateUIBasedOnLoginStatus();
+loginAndLogout();

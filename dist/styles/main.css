@@ -11924,6 +11924,102 @@ a {
   text-decoration: none;
 }
 
+button {
+  position: relative;
+  border: none;
+  transition: color 0.5s;
+  transform: 0.2s;
+  background-color: 0.2s;
+  outline: none;
+  border-radius: 3px;
+  margin: 0 10px;
+  border: 3px solid transparent;
+}
+
+button:active {
+  transform: translateY(3px);
+}
+
+button::after,
+button::before {
+  border-radius: 3px;
+}
+
+.btn {
+  background-color: transparent;
+  color: #3a5991;
+}
+
+.btn:hover {
+  background-color: transparent;
+  box-shadow: none;
+  color: #3a5991;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 3px solid #3a5991;
+  transition: opacity 0.3s;
+  border: 0.3s;
+}
+
+.btn:hover::before {
+  opacity: 0;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: 3px solid #fff;
+  opacity: 0;
+  z-index: -1;
+  transform: scaleX(1.1) scaleY(1.3);
+  transition: transform 0.3s;
+  opacity: 0.3s;
+}
+
+.btn:hover::after {
+  opacity: 1;
+  transform: scaleX(1) scaleY(1);
+}
+
+/*.btn-primary:hover {
+  background-color: #FFF;
+  color: $primary;
+  border: 1px solid $primary;
+}
+
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: "";
+  padding: 8px;
+  background: #fff;
+  transform: rotate(45deg);
+  position: absolute;
+  height: 100px;
+  top: -40px;
+  left: -100px;
+  transition: left ease-in-out 1s;
+  opacity: 0.3;
+}
+
+.btn:hover:before {
+  left: 110%;
+} */
 .user-image img {
   width: 80px;
   border-radius: 50%;
@@ -11946,6 +12042,14 @@ a {
   position: absolute;
   right: 72%;
   top: 26%;
+  color: #3a5991;
+}
+
+.modal-content {
+  max-width: 500px;
+  padding: 30px;
+  gap: 20px;
+  margin: 20px auto;
   color: #3a5991;
 }
 
@@ -11974,12 +12078,6 @@ main {
 .carousel-caption h4, .carousel-caption .h4,
 .carousel-caption p {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
-}
-
-.profile-img {
-  width: 80px;
-  border-radius: 50%;
-  height: 80px;
 }
 
 /*# sourceMappingURL=main.css.map */
