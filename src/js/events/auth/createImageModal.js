@@ -1,0 +1,33 @@
+import { editProfilePic } from '../auth/editProfilePic.js';
+
+export function createImageModal() {
+  const modal = document.createElement('div');
+  modal.id = 'editAvatarModal';
+  modal.classList.add('modal');
+  modal.innerHTML = `<div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2>Edit Avatar</h2>
+                        <input type="text" id="avatarUrl" placeholder="Enter new avatar URL">
+                        <button id="saveAvatar" class="btn btn-primary">Save</button>
+                        </div>`;
+
+  document.body.appendChild(modal);
+
+  const closeModal = modal.querySelector('.close');
+  closeModal.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+  window.onclick = function (event) {
+    if (event.target === modal) {
+      modal.style.display = 'none';
+    }
+  };
+
+  document.getElementById('saveAvatar').addEventListener('click', async (e) => {
+    const newAvatarUrl = document.getElementById('avatarUrl').value;
+    await editProfilePic(e, newAvatarUrl);
+
+    modal.style.display = 'none';
+    window.location.reload();
+  });
+}

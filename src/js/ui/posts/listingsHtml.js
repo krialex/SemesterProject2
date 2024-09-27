@@ -1,6 +1,5 @@
-export function buildListingsHTML(listings) {
-  const listingContainer = document.querySelector('.listings');
-  listingContainer.innerHTML = '';
+export function buildListingsHTML(listings, container) {
+  container.innerHTML = '';
 
   listings.data.forEach((post) => {
     let postHTML = `<div class="listing-card">
@@ -28,6 +27,6 @@ export function buildListingsHTML(listings) {
                      )}</p>
                      </div></a></div>`;
 
-    listingContainer.innerHTML += postHTML;
+    container.innerHTML += postHTML;
   });
 }

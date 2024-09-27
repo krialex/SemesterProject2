@@ -1,0 +1,29 @@
+.user-image img {
+  width: 80px;
+  border-radius: 50%;
+  height: 80px;
+  position: relative;
+}
+
+.user-info {
+  display: flex;
+  max-width: 600px;
+  align-items: baseline;
+  gap: 40px;
+}
+
+.user-image {
+  display: flex;
+}
+
+.editImage {
+  position: absolute;
+  right: 85%;
+  top: 26%;
+  color: $primary;
+}
+
+hr {
+  width: 100%;
+  color: $primary;
+}
