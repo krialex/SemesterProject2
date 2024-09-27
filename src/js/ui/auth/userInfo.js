@@ -1,5 +1,7 @@
 import { GET_BASE_URL, PROFILE, API_KEY } from '../../api/constants.js';
 import { createImageModal } from '../../events/auth/createImageModal.js';
+import { getUsersListings } from '../../ui/posts/userListings.js';
+import { newListingModal } from '../../events/auth/newListingModal.js';
 
 const userInfo = document.querySelector('.userInfo');
 
@@ -40,13 +42,33 @@ export async function getUserId() {
                                 <p>Name: ${userData.data.name}</p>
                                 <p>Credits: ${userData.data.credits}</p>
                                 <p>Wins: ${userData.data._count.wins}</p>
+                                <button class="btn-small">Create listing</button>
                                </div>`;
+
+    await getUsersListings();
 
     document.querySelector('#edit-avatar').addEventListener('click', (e) => {
       e.preventDefault();
       createImageModal(userData.data.avatar.url);
       document.getElementById('editAvatarModal').style.display = 'block';
     });
+
+    document.querySelector('.btn-small').addEventListener('click', (e) => {
+      e.preventDefault();
+      newListingModal();
+      document.getElementById('newListingModal').style.display = 'block';
+    });
+
+    /*
+    //her er noe problemer. modalen kommer fremdeles ikke opp..
+    const createListingButton = document.querySelector('.btn-small');
+    if (createListingButton) {
+        createListingButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            newListingModal(); 
+        });  
+    }*/
+
     return userData;
   } catch (error) {
     console.log('Could not get user info on profile:', error);

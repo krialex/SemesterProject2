@@ -13,8 +13,9 @@ async function init() {
     const allListings = listingsData.data;
     const topListings = feturedListings(allListings);
 
+    const listingContainer = document.querySelector('.listings-container');
     featuredListingsHtml(topListings);
-    buildListingsHTML(listingsData);
+    buildListingsHTML(listingsData, listingContainer);
   } catch (error) {
     console.log('Failed to loade page', error);
   }

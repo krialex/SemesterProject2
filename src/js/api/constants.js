@@ -3,3 +3,4 @@ export const GET_BASE_URL = `https://v2.api.noroff.dev`;
 export const REGISTRER = `/auth/register`;
 export const LOGIN = `/auth/login`;
 export const PROFILE = `/auction/profiles`;
+export const LISTINGS = `/auction/listings`;

@@ -19,6 +19,18 @@ a {
   text-decoration: none;
 }
 
+.btn-small {
+  background-color: inherit;
+}
+
+.btn-small:hover {
+  color: $primary;
+}
+
+.newListingBtn {
+  margin-top: 13px;
+}
+
 // prøvde en effekt fra nettet. ikke helt som jeg hadde tenkt. trenger litt justeringer, evt prøve en annen.
 button {
   position: relative;

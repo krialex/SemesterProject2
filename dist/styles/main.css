@@ -11924,6 +11924,18 @@ a {
   text-decoration: none;
 }
 
+.btn-small {
+  background-color: inherit;
+}
+
+.btn-small:hover {
+  color: #3a5991;
+}
+
+.newListingBtn {
+  margin-top: 13px;
+}
+
 button {
   position: relative;
   border: none;
@@ -12040,8 +12052,13 @@ button::before {
 
 .editImage {
   position: absolute;
-  right: 72%;
+  right: 85%;
   top: 26%;
+  color: #3a5991;
+}
+
+hr {
+  width: 100%;
   color: #3a5991;
 }
 
@@ -12051,6 +12068,24 @@ button::before {
   gap: 20px;
   margin: 20px auto;
   color: #3a5991;
+}
+
+.listing-modal {
+  gap: 2px;
+}
+
+.newListingLable {
+  color: black;
+  font-size: 0.7rem;
+}
+
+.user-feedback-container {
+  display: flex;
+}
+
+.user-feedback-container p {
+  margin: 0px;
+  padding: 10px;
 }
 
 * {

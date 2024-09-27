@@ -18,7 +18,12 @@
 
 .editImage {
   position: absolute;
-  right: 72%;
+  right: 85%;
   top: 26%;
+  color: $primary;
+}
+
+hr {
+  width: 100%;
   color: $primary;
 }
