@@ -1,16 +1,18 @@
 .modal-content {
   max-width: 500px;
   padding: 30px;
-  gap: 20px;
+  gap: 2px;
   margin: 20px auto;
   color: $primary;
 }
 
-.listing-modal {
-  gap: 2px;
-}
-
+label,
 .newListingLable {
   color: black;
   font-size: 0.7rem;
+  margin-top: 5px;
+}
+
+.close {
+  cursor: pointer;
 }

@@ -59,16 +59,6 @@ export async function getUserId() {
       document.getElementById('newListingModal').style.display = 'block';
     });
 
-    /*
-    //her er noe problemer. modalen kommer fremdeles ikke opp..
-    const createListingButton = document.querySelector('.btn-small');
-    if (createListingButton) {
-        createListingButton.addEventListener('click', (e) => {
-            e.preventDefault();
-            newListingModal(); 
-        });  
-    }*/
-
     return userData;
   } catch (error) {
     console.log('Could not get user info on profile:', error);

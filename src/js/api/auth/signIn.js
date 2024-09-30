@@ -41,22 +41,30 @@ signInForm.addEventListener('submit', async (event) => {
   let isValid = true;
 
   if (userName.value.trim() === '') {
-    errorName.style.display = 'block';
+    errorName.classList.add('show');
+    // errorName.style.display = 'inline-block';
     isValid = false;
   } else {
-    errorName.style.display = 'none';
+    errorName.classList.remove('show');
+    //errorName.style.display = 'none';
   }
   if (userEmail.value.trim() === '' || !validateEmail(userEmail.value)) {
-    errorEmail.style.display = 'block';
+    console.log('email is invalid..');
+
+    errorEmail.classList.add('show');
+    //errorEmail.style.display = 'inline-block';
     isValid = false;
   } else {
-    errorEmail.style.display = 'none';
+    errorEmail.classList.remove('show');
+    //errorEmail.style.display = 'none';
   }
   if (userPassword.value.trim().length < 8) {
-    errorPassword.style.display = 'block';
+    errorPassword.classList.add('show');
+    //errorPassword.style.display = 'inline-block';
     isValid = false;
   } else {
-    errorPassword.style.display = 'none';
+    errorPassword.classList.remove('show');
+    //errorPassword.style.display = 'none';
   }
 
   if (isValid) {

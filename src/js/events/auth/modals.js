@@ -47,6 +47,7 @@ export function initializeModals() {
 
         const email = signupForm.querySelector('#signupEmail').value;
         const password = signupForm.querySelector('#signupPassword').value;
+        // const name = signupForm.querySelector("#signinName").value;
 
         try {
           await registrerAccount(email, password);

@@ -1,4 +1,15 @@
 .errorMessage {
   display: none;
   color: $danger;
+  font-size: 0.7rem;
 }
+
+.errorMessage.show {
+  display: inline !important;
+}
+
+.signInForm .errorMessage.show {
+  display: inline !important;
+}
+
+// føkk altså.. jeg får bare opp errormeldinger på login, men ikke på signin..

@@ -56,6 +56,7 @@ document.querySelector('.signout-button')?.addEventListener('click', () => {
   localStorage.removeItem('profile');
   localStorage.setItem('loggedIn', 'false');
   loginAndLogout();
+  window.location.href = 'index.html';
 });
 
 loginAndLogout();

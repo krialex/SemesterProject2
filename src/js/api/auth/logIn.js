@@ -37,13 +37,13 @@ logInForm.addEventListener('submit', async (event) => {
   let valueValid = true;
 
   if (userEmail.value.trim() === '' || !validateEmail(userEmail.value)) {
-    errorEmail.style.display = 'block';
+    errorEmail.style.display = 'inline';
     valueValid = false;
   } else {
     errorEmail.style.display = 'none';
   }
   if (userPassword.value.trim().length < 8) {
-    errorPassword.style.display = 'block';
+    errorPassword.style.display = 'inline';
     valueValid = false;
   } else {
     errorPassword.style.display = 'none';
