@@ -1,0 +1,19 @@
+.oneListing {
+  display: flex;
+  gap: 27px;
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.placeYourBid {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+@media (max-width: 600px) {
+  .oneListing {
+    flex-direction: column;
+    max-width: 400px;
+  }
+}
