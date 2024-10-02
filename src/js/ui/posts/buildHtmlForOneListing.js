@@ -32,10 +32,10 @@ export function buildHtmlForOneListing(listing) {
                               minute: '2-digit',
                             })}</p>
                             <p>Current bids: ${listing.data._count.bids}</p>
-                            <form class="placeYourBid">
+                            <form id="bidForm" class="placeYourBid">
                             <label for="yourBid">Place your bid: </label>
                             <input type="text" id="yourBid" placeholder="Your bid" />
-                            <button class="btn btn-primary">Bid now</button>
+                            <button type="submit" class="btn btn-primary">Bid now</button>
                             </form>
                             </div>`;
 
