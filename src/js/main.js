@@ -6,6 +6,7 @@ import { initializeModals } from './events/auth/modals.js';
 import { getUserId } from './ui/auth/userInfo.js';
 import { getListingById } from './ui/posts/getListingById.js';
 import { searchListings } from './events/posts/searchListings.js';
+import { initializeSearchInputBehavior } from './ui/common/initializeSearchInputBehavior.js';
 //import { buildHtmlForOneListing } from './ui/posts/buildHtmlForOneListing.js';
 
 import '../../node_modules/bootstrap/dist/js/bootstrap.bundle.js';
@@ -74,9 +75,6 @@ async function handleSearch(event) {
   if (query.length > 0) {
     try {
       const searchResult = await searchListings(query);
-
-      console.log('Search results:', searchResult);
-
       const listingContainer = document.querySelector('.listings-container');
 
       buildListingsHTML(searchResult, listingContainer);
@@ -92,3 +90,5 @@ async function handleSearch(event) {
 }
 
 document.getElementById('search-input').addEventListener('input', handleSearch);
+
+initializeSearchInputBehavior();

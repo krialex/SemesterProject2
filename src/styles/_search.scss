@@ -1,8 +1,36 @@
 .search-container {
-  border-bottom: 1px solid;
+  margin-top: 50px;
 }
 
-.search-input,
-.search-btn {
-  border: 0px;
+.box {
+  height: 30px;
+  display: flex;
+  cursor: pointer;
+  padding: 15px 20px;
+  background-color: #fff;
+  border-radius: 30px;
+  align-items: center;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+  transition: width 0.4s ease;
+
+  &.active {
+    input {
+      width: 350px;
+    }
+  }
+
+  input {
+    width: 0;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    transition: width 0.4s ease;
+    background: transparent;
+  }
+
+  div .fas {
+    color: $primary;
+    font-size: 18px;
+    background-color: #fff;
+  }
 }
