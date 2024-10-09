@@ -9,6 +9,16 @@
   display: flex;
   flex-direction: column;
   gap: 5px;
+  margin-top: 20px;
+}
+
+.infoOnListing {
+  font-size: 0.9rem;
+  color: $primary;
+}
+
+.dateInfo p {
+  margin-bottom: 0;
 }
 
 @media (max-width: 600px) {

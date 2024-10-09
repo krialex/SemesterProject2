@@ -8,7 +8,6 @@ export function featuredListingsHtml(topListings) {
   }
 
   let carouselHTML = `<div id="featuredCarousel" class="carousel slide">
-                        <a href="listingItem.html">
                         <div class="carousel-inner">`;
 
   topListings.forEach((post, index) => {
@@ -19,13 +18,13 @@ export function featuredListingsHtml(topListings) {
         ? post.media[0].alt || 'Listing image'
         : 'No image available';
 
-    carouselHTML += `<div class="carousel-item${isActive}">
+    carouselHTML += `<a href="listingItem.html?id=${post.id}" class="carousel-item${isActive}" style="text-decoration: none;">
                          <img src="${imageUrl}" class="d-block w-100 feature-img" alt="${imageAlt}">
                          <div class="carousel-caption d-md-block">
-                         <h4>${post.title}</h4>
-                         <p>Bids: ${post._count.bids}</p>
+                           <h4 style="color: white;">${post.title}</h4>
+                           <p style="color: white;">Bids: ${post._count.bids}</p>
                          </div>
-                         </div>`;
+                         </a>`;
   });
 
   carouselHTML += `</div>
@@ -37,7 +36,6 @@ export function featuredListingsHtml(topListings) {
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                      </button>
-                     </a>
                      </div>`;
 
   featuredSection.innerHTML = carouselHTML;

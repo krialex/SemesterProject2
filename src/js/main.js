@@ -9,6 +9,7 @@ import { getListingById } from './ui/posts/getListingById.js';
 
 import '../../node_modules/bootstrap/dist/js/bootstrap.bundle.js';
 
+// Hvordan får jeg featuredListings til å også ha en href til enkelt listing-side??
 async function init() {
   try {
     const listingsData = await getListings();

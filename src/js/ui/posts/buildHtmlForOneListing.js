@@ -13,7 +13,8 @@ export function buildHtmlForOneListing(listing) {
     listingHTML += `</div>
                             <div><h2>${listing.data.title}</h2>
                             <p>${listing.data.description}</p>
-                            <p>Created: ${new Date(
+                            <div class="dateInfo">
+                            <p><span class="infoOnListing">Created:</span> ${new Date(
                               listing.data.created,
                             ).toLocaleDateString('en-GB', {
                               year: 'numeric',
@@ -22,7 +23,7 @@ export function buildHtmlForOneListing(listing) {
                               hour: '2-digit',
                               minute: '2-digit',
                             })}</p>
-                            <p>Ends at: ${new Date(
+                            <p><span class="infoOnListing">Ends at:</span> ${new Date(
                               listing.data.endsAt,
                             ).toLocaleDateString('en-GB', {
                               year: 'numeric',
@@ -31,7 +32,8 @@ export function buildHtmlForOneListing(listing) {
                               hour: '2-digit',
                               minute: '2-digit',
                             })}</p>
-                            <p>Current bids: ${listing.data._count.bids}</p>
+                            <p><span class="infoOnListing">Current bids:</span> ${listing.data._count.bids}</p>
+                            </div>
                             <form id="bidForm" class="placeYourBid">
                             <label for="yourBid">Place your bid: </label>
                             <input type="text" id="yourBid" placeholder="Your bid" />
