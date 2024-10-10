@@ -27,16 +27,12 @@
       <a href="/"><h1>HammerTime</h1></a>
 
       <div class="login-btn">
-        <button type="submit" class="btn login-button btn-primary">
-          LogIn
-        </button>
-        <button type="submit" class="btn signin-button btn-secondary">
-          SignIn
-        </button>
+        <button type="submit" class="btn login-button buttons">LogIn</button>
+        <button type="submit" class="btn signin-button buttons">SignIn</button>
         <a href="userProfile.html"
           ><i class="fa-solid fa-user profile-icon"></i
         ></a>
-        <button class="btn signout-button btn-secondary">Logg ut</button>
+        <button class="btn signout-button buttons">Log out</button>
       </div>
     </header>
     <main>
@@ -89,7 +85,9 @@
                   Your password needs to be at least 8 characters long
                 </div>
               </div>
-              <button type="submit" class="btn btn-primary">Log In</button>
+              <button type="submit" class="btn buttons login-button">
+                Log In
+              </button>
             </form>
           </div>
         </div>
@@ -107,7 +105,7 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="signinModalLabel">Sign In</h5>
+            <h5 class="modal-title" id="signinModalLabel">Sign Up</h5>
             <button
               type="button"
               class="btn-close"
@@ -125,7 +123,7 @@
                   id="signinName"
                   required
                 />
-                <div class="errorMessage" id="errorName">
+                <div class="errorMessage" id="errorSigninName">
                   Please fill inn a username
                 </div>
               </div>
@@ -139,7 +137,7 @@
                   id="signinEmail"
                   required
                 />
-                <div class="errorMessage" id="errorEmail">
+                <div class="errorMessage" id="errorSigninEmail">
                   Please use a @stud.noroff.no account
                 </div>
               </div>
@@ -151,15 +149,13 @@
                   id="signinPassword"
                   required
                 />
-                <div class="errorMessage" id="errorPassword">
+                <div class="errorMessage" id="errorSigninPassword">
                   Your password needs to be at least 8 characters long
                 </div>
               </div>
-              <div class="mb-3">
-                <label for="avatar" class="form-label">Avatar url</label>
-                <input type="avatar" class="form-control" id="signinAvatar" />
-              </div>
-              <button type="submit" class="btn btn-primary">Sign In</button>
+              <button type="submit" class="btn buttons signin-button">
+                Sign Up
+              </button>
             </form>
           </div>
         </div>

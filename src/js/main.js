@@ -7,7 +7,6 @@ import { getUserId } from './ui/auth/userInfo.js';
 import { getListingById } from './ui/posts/getListingById.js';
 import { searchListings } from './events/posts/searchListings.js';
 import { initializeSearchInputBehavior } from './ui/common/initializeSearchInputBehavior.js';
-//import { buildHtmlForOneListing } from './ui/posts/buildHtmlForOneListing.js';
 
 import '../../node_modules/bootstrap/dist/js/bootstrap.bundle.js';
 

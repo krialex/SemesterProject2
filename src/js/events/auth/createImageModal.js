@@ -9,7 +9,7 @@ export function createImageModal() {
                         <h2>Edit Avatar</h2>
                         <label for="avatarUrl">Enter your new avatar: </label>
                         <input type="text" id="avatarUrl" placeholder="Enter new avatar URL">
-                        <button id="saveAvatar" class="btn btn-primary newAvatarImage">Save</button>
+                        <button id="saveAvatar" class="btn btn-primary buttons newAvatarImage">Save</button>
                         </div>`;
 
   document.body.appendChild(modal);

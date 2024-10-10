@@ -17,7 +17,7 @@ export function newListingModal() {
                         <input type="text" id="newListingUrl" placeholder="Image url">
                         <lable for="newListingEndsAt" class="newListingLable">Enter end date end time: </lable>
                         <input type="datetime-local" id="newListingEndsAt" placeholder="Enter end date for listing">
-                        <button id="pubilshListing" class="btn btn-primary newListingBtn">Publish</button>
+                        <button id="pubilshListing" class="btn btn-primary newListingBtn buttons">Publish</button>
                         </div>`;
 
   document.body.appendChild(modal);
