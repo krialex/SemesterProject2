@@ -16,33 +16,43 @@ This is a school assigment where the task was to create a website to a client th
 
 ### Installing
 
-1. Clone the repo:
+1. **Clone the repo:**:
 
-```
+```bash
 git clone ....
 ```
 
-2. Install the dependencies:
+2. **Install the dependencies:**:
 
-```
-NodeJS
+```bash
+npm install
 ```
 
-```
+```bash
 npm install --save-dev bootstrap sass live-server concurrently
 ```
 
-### Running
+### **Run the project:**
 
 You need to have Node installed to run this on your computer, and use the following command in the directory of the project.
 
-```
+```bash
 npm run build
 ```
 
-```
+```bash
 npm run watch
 ```
+
+## Testing
+
+The project uses Prettier and ESLint to ensure code quality
+
+### Formatting and Linting
+
+- Prettier: Formats code.
+
+- ESLint: Checks for linting issues in the JavaScript files.
 
 ## Links to the project
 
