@@ -7,6 +7,7 @@ $secondary: #146e8f;
 @import '../../node_modules/bootstrap/scss/bootstrap';
 
 @import 'header';
+@import 'carousel';
 @import 'search';
 @import 'listings-feed';
 @import 'images';
@@ -37,9 +38,4 @@ main {
   flex-direction: column;
   align-items: center;
   padding-top: 20px;
-}
-
-.carousel-caption h4,
-.carousel-caption p {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 }

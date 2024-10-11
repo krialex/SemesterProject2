@@ -4,7 +4,7 @@ export function createImageModal() {
   const modal = document.createElement('div');
   modal.id = 'editAvatarModal';
   modal.classList.add('modal');
-  modal.innerHTML = `<div class="modal-content">
+  modal.innerHTML = `<div class="modal-content listing-modal">
                         <span class="close">&times;</span>
                         <h2>Edit Avatar</h2>
                         <label for="avatarUrl">Enter your new avatar: </label>

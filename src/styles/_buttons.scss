@@ -23,7 +23,7 @@ a {
   background-color: inherit;
   padding: 2px 4px;
   border-radius: 8px;
-  border: 1px solid $primary;
+  border: 1px solid #3a59912e;
   box-shadow: 0 0 15px rgba(58, 89, 145, 0.3);
 }
 
@@ -31,8 +31,7 @@ a {
   color: $primary;
 }
 
-.newListingBtn,
-.newAvatarImage {
+.listing-modal button {
   margin-top: 20px;
 }
 

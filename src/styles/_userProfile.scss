@@ -1,8 +1,12 @@
 .user-info {
   display: flex;
   max-width: 600px;
-  align-items: baseline;
+  align-items: end;
   gap: 40px;
+}
+
+.user-info p {
+  margin-bottom: 0;
 }
 
 .user-image {
@@ -26,4 +30,12 @@
 hr {
   width: 100%;
   color: $primary;
+}
+
+@media screen and (max-width: 600px) {
+  .user-info {
+    max-width: 316px;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
 }
