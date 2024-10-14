@@ -11,6 +11,11 @@
   gap: 18px;
 }
 
+.featured-listings,
+.listings {
+  text-transform: capitalize;
+}
+
 .listing-card {
   display: flex;
   flex-direction: column;

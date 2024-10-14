@@ -11,12 +11,18 @@ import { initializeSearchInputBehavior } from './ui/common/initializeSearchInput
 import '../../node_modules/bootstrap/dist/js/bootstrap.bundle.js';
 
 async function init() {
+  const loader = document.querySelector('.loader');
+  loader.style.display = 'block';
+
   try {
     const listingsData = await getListings();
     const allListings = listingsData.data;
     const topListings = feturedListings(allListings);
 
     const listingContainer = document.querySelector('.listings-container');
+
+    loader.style.display = 'none';
+
     featuredListingsHtml(topListings);
     buildListingsHTML(listingsData, listingContainer);
   } catch (error) {

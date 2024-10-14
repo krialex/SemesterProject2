@@ -11,6 +11,8 @@ export function buildListingsHTML(listings, container) {
       let imageAlt = post.media[0].alt || 'Listing image';
 
       postHTML += `<img src="${imageUrl}" alt="${imageAlt}" class="listing-img">`;
+    } else {
+      postHTML += `<div class="no-image-placeholder">*No image found for this listing*</div>`;
     }
 
     postHTML += `<div class="listingsFeed-info">

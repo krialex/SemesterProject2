@@ -18,13 +18,25 @@ export function featuredListingsHtml(topListings) {
         ? post.media[0].alt || 'Listing image'
         : 'No image available';
 
-    carouselHTML += `<a href="listingItem.html?id=${post.id}" class="carousel-item${isActive}" style="text-decoration: none;">
-                         <img src="${imageUrl}" class="d-block w-100 feature-img" alt="${imageAlt}">
-                         <div class="carousel-caption d-md-block">
-                           <h4 style="color: white;">${post.title}</h4>
-                           <p style="color: white;">Bids: ${post._count.bids}</p>
-                         </div>
-                         </a>`;
+    if (imageUrl) {
+      carouselHTML += `<a href="listingItem.html?id=${post.id}" class="carousel-item${isActive}" style="text-decoration: none;">
+        <img src="${imageUrl}" class="d-block w-100 feature-img" alt="${imageAlt}">
+        <div class="carousel-caption d-md-block">
+          <h4 style="color: white;">${post.title}</h4>
+          <p style="color: white;">Bids: ${post._count.bids}</p>
+        </div>
+        </a>`;
+    } else {
+      carouselHTML += `<a href="listingItem.html?id=${post.id}" class="carousel-item${isActive}" style="text-decoration: none;">
+      <div class="no-featured-image-placeholder d-block w-100 feature-img">
+        *No image found for this listing*
+      </div>
+      <div class="carousel-caption d-md-block">
+        <h4 style="color: white;">${post.title}</h4>
+        <p style="color: white;">Bids: ${post._count.bids}</p>
+      </div>
+    </a>`;
+    }
   });
 
   carouselHTML += `</div>

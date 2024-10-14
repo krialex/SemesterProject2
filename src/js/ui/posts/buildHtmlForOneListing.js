@@ -9,6 +9,8 @@ export function buildHtmlForOneListing(listing) {
       let imageAlt = listing.data.media[0].alt || 'Listing image';
 
       listingHTML += `<img src="${imageUrl}" alt="${imageAlt}" class="listing-img">`;
+    } else {
+      listingHTML += `<div class="no-image-placeholder">*No image found for this listing*</div>`;
     }
     listingHTML += `</div>
                             <div><h2>${listing.data.title}</h2>

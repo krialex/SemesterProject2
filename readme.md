@@ -19,7 +19,7 @@ This is a school assigment where the task was to create a website to a client th
 1. **Clone the repo:**:
 
 ```bash
-git clone ....
+git clone https://github.com/krialex/SemesterProject2
 ```
 
 2. **Install the dependencies:**:
