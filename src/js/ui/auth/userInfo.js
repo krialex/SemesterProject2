@@ -36,7 +36,7 @@ export async function getUserId() {
                                 <div class="user-image">
                                 <img src="${userData.data.avatar.url}" alt="${userData.data.avatar.alt} 
                                 class="profile-img">
-                                <a href="#" id="edit-avatar">
+                                <a href="#" id="edit-avatar" aria-label="Edit avatar image">
                                 <i class="fa-solid fa-pen-to-square editImage"></i>
                                 </a></div>
                                 <p>Name: ${userData.data.name}</p>

@@ -4,8 +4,8 @@ export function newListingModal() {
   const modal = document.createElement('div');
   modal.id = 'newListingModal';
   modal.classList.add('modal');
-  modal.innerHTML = `<div class="modal-content listing-modal">
-                        <span class="close">&times;</span>
+  modal.innerHTML = `<div class="modal-content listing-modal" role="dialog" aria-labelledby="modal-title" aria-modal="true">
+                        <span class="close" aria-label="Close">&times;</span>
                         <h2>Create new listing</h2>
                         <lable for="newListingTitle" class="newListingLable">Your title: </lable>
                         <input type="text" id="newListingTitle" placeholder="Title" required>

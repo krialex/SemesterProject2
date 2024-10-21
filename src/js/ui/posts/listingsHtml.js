@@ -3,7 +3,7 @@ export function buildListingsHTML(listings, container) {
 
   listings.data.forEach((post) => {
     let postHTML = `<div class="listing-card">
-                        <a href="listingItem.html?id=${post.id}">
+                        <a href="listingItem.html?id=${post.id}" aria-label="View Listing">
                         <h3>${post.title}</h3>`;
 
     if (post.media && post.media.length > 0) {

@@ -19,7 +19,7 @@ export function featuredListingsHtml(topListings) {
         : 'No image available';
 
     if (imageUrl) {
-      carouselHTML += `<a href="listingItem.html?id=${post.id}" class="carousel-item${isActive}" style="text-decoration: none;">
+      carouselHTML += `<a href="listingItem.html?id=${post.id}" class="carousel-item${isActive}" style="text-decoration: none;" aria-label="View Listing">
         <img src="${imageUrl}" class="d-block w-100 feature-img" alt="${imageAlt}">
         <div class="carousel-caption d-md-block">
           <h4 style="color: white;">${post.title}</h4>
@@ -27,7 +27,7 @@ export function featuredListingsHtml(topListings) {
         </div>
         </a>`;
     } else {
-      carouselHTML += `<a href="listingItem.html?id=${post.id}" class="carousel-item${isActive}" style="text-decoration: none;">
+      carouselHTML += `<a href="listingItem.html?id=${post.id}" class="carousel-item${isActive}" style="text-decoration: none; aria-label="View Listing"">
       <div class="no-featured-image-placeholder d-block w-100 feature-img">
         *No image found for this listing*
       </div>
