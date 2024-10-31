@@ -68,6 +68,12 @@ Link to my design prototype:
 https://xd.adobe.com/view/9dc983cf-86c0-473d-a686-0443e82e1e88-c89a/
 ```
 
+Link to the style guide:
+
+```
+https://styleguidee.netlify.app/
+```
+
 ## Contact
 
 This is my contact information:

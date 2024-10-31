@@ -8,8 +8,6 @@ import { getListingById } from './ui/posts/getListingById.js';
 import { searchListings } from './events/posts/searchListings.js';
 import { initializeSearchInputBehavior } from './ui/common/initializeSearchInputBehavior.js';
 
-import '../../node_modules/bootstrap/dist/js/bootstrap.bundle.js';
-
 async function init() {
   const loader = document.querySelector('.loader');
   loader.style.display = 'block';

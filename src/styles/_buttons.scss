@@ -89,3 +89,12 @@ a {
 .buttons:hover::after {
   opacity: 1;
 }
+
+.ended-btn {
+  border: 1px solid $primary;
+  border-radius: 8px;
+  width: fit-content;
+  padding: 2px 5px;
+  background-color: #fafbff;
+  font-size: 0.9rem;
+}

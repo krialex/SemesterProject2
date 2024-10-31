@@ -3,8 +3,7 @@ $primaryFont: 'Amatic SC', sans-serif;
 $secondaryFont: 'Josefin Sans', sans-serif;
 $primary: #3a5991;
 $secondary: #146e8f;
-
-@import '../../node_modules/bootstrap/scss/bootstrap';
+$danger: #ff0000;
 
 @import 'header';
 @import 'carousel';

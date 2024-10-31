@@ -8,17 +8,25 @@ export async function getListingById() {
   const id = urlParams.get('id');
   const token = load('token');
 
-  const response = await fetch(`${GET_BASE_URL}${LISTINGS}/${id}`, {
-    headers: {
-      'X-Noroff-API-Key': API_KEY,
+  const response = await fetch(
+    `${GET_BASE_URL}${LISTINGS}/${id}?_seller=true&_bids=true`,
+    {
+      headers: {
+        'X-Noroff-API-Key': API_KEY,
+      },
+      method: 'GET',
     },
-    method: 'GET',
-  });
+  );
 
   if (response.ok) {
     const listing = await response.json();
     console.log(listing);
-    buildHtmlForOneListing(listing);
+
+    const lastBid =
+      listing.data.bids?.length > 0
+        ? listing.data.bids[listing.data.bids.length - 1]
+        : null;
+    buildHtmlForOneListing(listing, lastBid);
 
     const bidForm = document.getElementById('bidForm');
     bidForm.addEventListener('submit', async (e) => {
