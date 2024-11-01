@@ -1,4 +1,4 @@
-export function buildHtmlForOneListing(listing, lastBid) {
+export function buildHtmlForOneListing(listing, lastBid, lastBidder) {
   const listingContainer = document.querySelector('.oneListing');
 
   if (listing) {
@@ -50,7 +50,7 @@ export function buildHtmlForOneListing(listing, lastBid) {
       listingHTML += `<p><span class="infoOnListing">Current bids:</span> ${listing.data._count.bids}</p>`;
       if (lastBid) {
         listingHTML += `<div class="last-bid">
-                          <p><span class="infoOnListing">Last bid by seller:</span> ${lastBid.amount}</p>
+                          <p><span class="infoOnListing">Last bid:</span> ${lastBid.amount} - made by ${lastBidder.name}</p>
                           <p><span class="infoOnListing">Bid placed on:</span> ${new Date(
                             lastBid.created,
                           ).toLocaleDateString('en-GB', {

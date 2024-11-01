@@ -26,7 +26,10 @@ export async function getListingById() {
       listing.data.bids?.length > 0
         ? listing.data.bids[listing.data.bids.length - 1]
         : null;
-    buildHtmlForOneListing(listing, lastBid);
+
+    const lastBidder = lastBid ? lastBid.bidder : null;
+
+    buildHtmlForOneListing(listing, lastBid, lastBidder);
 
     const bidForm = document.getElementById('bidForm');
     bidForm.addEventListener('submit', async (e) => {

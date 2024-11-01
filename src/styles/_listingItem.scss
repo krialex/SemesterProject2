@@ -6,7 +6,14 @@
   background-color: #fff;
   padding: 40px;
   border-radius: 15px;
-  text-transform: capitalize;
+}
+
+.oneListing::first-letter,
+.featured-listings::first-letter,
+.listings::first-letter,
+h3::first-letter,
+h4::first-letter {
+  text-transform: uppercase;
 }
 
 .placeYourBid {
