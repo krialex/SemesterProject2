@@ -6,7 +6,7 @@
   display: flex;
   margin: 20px auto;
   justify-content: center;
-  max-width: 750px;
+  max-width: 1086px;
   flex-wrap: wrap;
   gap: 18px;
 }
@@ -19,7 +19,7 @@
 .listing-card {
   display: flex;
   flex-direction: column;
-  width: 205px;
+  width: 335px;
   background-color: #fff;
   padding: 10px;
   align-items: center;
@@ -35,6 +35,6 @@
 }
 
 .listingsFeed-info {
-  font-size: 0.8rem;
   margin-top: 5px;
+  margin-bottom: 10px;
 }

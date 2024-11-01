@@ -17,11 +17,12 @@
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 .btn-small {
   background-color: inherit;
-  padding: 2px 4px;
+  padding: 3px 6px 1px;
   border-radius: 8px;
   border: 1px solid #3a59912e;
   box-shadow: 0 0 15px rgba(58, 89, 145, 0.3);
@@ -91,10 +92,11 @@ a {
 }
 
 .ended-btn {
-  border: 1px solid $primary;
-  border-radius: 8px;
   width: fit-content;
-  padding: 2px 5px;
-  background-color: #fafbff;
-  font-size: 0.9rem;
+  margin-top: 20px;
+  padding: 5px 15px 2px;
+  background-color: $danger;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
 }

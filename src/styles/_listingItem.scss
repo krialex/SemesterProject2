@@ -2,7 +2,7 @@
   display: flex;
   gap: 27px;
   margin: 20px auto;
-  max-width: 600px;
+  max-width: 650px;
   background-color: #fff;
   padding: 40px;
   border-radius: 15px;
@@ -12,7 +12,7 @@
 .placeYourBid {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 7px;
   margin-top: 20px;
 }
 
@@ -28,6 +28,6 @@
 @media (max-width: 600px) {
   .oneListing {
     flex-direction: column;
-    max-width: 400px;
+    max-width: 450px;
   }
 }

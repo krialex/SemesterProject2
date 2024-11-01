@@ -35,16 +35,3 @@ export function buildListingsHTML(listings, container) {
     container.innerHTML += postHTML;
   });
 }
-
-/* postHTML += `<div class="listingsFeed-info">
-                     <p>Bids: ${post._count.bids}</p>
-                     <p>Ends at: ${new Date(post.endsAt).toLocaleDateString(
-                       'en-GB',
-                       {
-                         year: 'numeric',
-                         month: 'long',
-                         day: 'numeric',
-                         hour: '2-digit',
-                         minute: '2-digit',
-                       },
-                     )}</p> */

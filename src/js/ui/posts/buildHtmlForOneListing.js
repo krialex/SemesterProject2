@@ -14,23 +14,26 @@ export function buildHtmlForOneListing(listing, lastBid) {
     }
 
     const endDate = new Date(listing.data.endsAt);
-    const endDataHTML =
-      endDate > new Date()
-        ? `<p><span class="infoOnListing">Ends at:</span> ${endDate.toLocaleDateString(
-            'en-GB',
-            {
-              year: 'numeric',
-              month: 'long',
-              day: 'numeric',
-              hour: '2-digit',
-              minute: '2-digit',
-            },
-          )}</p>`
-        : '<div class="ended-btn">Ended</div>';
+    const isEnded = endDate <= new Date();
+
+    const endDataHTML = isEnded
+      ? '<div class="ended-btn">Ended</div>'
+      : `<p><span class="infoOnListing">Ends at:</span> ${endDate.toLocaleDateString(
+          'en-GB',
+          {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit',
+          },
+        )}</p>`;
 
     listingHTML += `</div>
                             <div><h2>${listing.data.title}</h2>
                             <p>${listing.data.description}</p>
+                            <br>
+                            <hr>
                             <div class="dateInfo">
                             <p><span class="infoOnListing">Created:</span> ${new Date(
                               listing.data.created,
@@ -41,30 +44,32 @@ export function buildHtmlForOneListing(listing, lastBid) {
                               hour: '2-digit',
                               minute: '2-digit',
                             })}</p>
-                           ${endDataHTML}
-                            <p><span class="infoOnListing">Current bids:</span> ${listing.data._count.bids}</p>
-                            </div>`;
-    if (lastBid) {
-      listingHTML += `<div class="last-bid">
-                        <p><span class="infoOnListing">Last bid by seller:</span> ${lastBid.amount}</p>
-                        <p><span class="infoOnListing">Bid placed on:</span> ${new Date(
-                          lastBid.created,
-                        ).toLocaleDateString('en-GB', {
-                          year: 'numeric',
-                          month: 'long',
-                          day: 'numeric',
-                          hour: '2-digit',
-                          minute: '2-digit',
-                        })}</p>
-                        </div>`;
-    }
-    listingHTML += `<form id="bidForm"class="placeYourBid">
-                        <label for="yourBid">Place your bid: </label>
-                        <input type="text" id="yourBid" placeholder="Your bid" />
-                        <button type="submit" class="btn btn-primary">Bid now</button>
-                        </form>
-                        </div>`;
+                           ${endDataHTML}`;
 
+    if (!isEnded) {
+      listingHTML += `<p><span class="infoOnListing">Current bids:</span> ${listing.data._count.bids}</p>`;
+      if (lastBid) {
+        listingHTML += `<div class="last-bid">
+                          <p><span class="infoOnListing">Last bid by seller:</span> ${lastBid.amount}</p>
+                          <p><span class="infoOnListing">Bid placed on:</span> ${new Date(
+                            lastBid.created,
+                          ).toLocaleDateString('en-GB', {
+                            year: 'numeric',
+                            month: 'long',
+                            day: 'numeric',
+                            hour: '2-digit',
+                            minute: '2-digit',
+                          })}</p>
+                          </div>`;
+      }
+      listingHTML += `<form id="bidForm" class="placeYourBid">
+                          <label for="yourBid">Place your bid: </label>
+                          <input type="text" id="yourBid" placeholder="Your bid" />
+                          <button type="submit" class="btn btn-primary buttons">Bid now</button>
+                          </form>`;
+    }
+
+    listingHTML += `</div></div>`;
     listingContainer.innerHTML += listingHTML;
   } else {
     listingContainer.innerHTML = `<p>Listing not found</p>`;
