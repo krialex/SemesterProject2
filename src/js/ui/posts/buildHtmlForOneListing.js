@@ -72,6 +72,9 @@ export function buildHtmlForOneListing(listing, lastBid, lastBidder) {
 
     listingHTML += `</div></div>`;
     listingContainer.innerHTML += listingHTML;
+
+    console.log('Last bid:', lastBid);
+    console.log('Last bidder:', lastBidder);
   } else {
     listingContainer.innerHTML = `<p>Listing not found</p>`;
   }

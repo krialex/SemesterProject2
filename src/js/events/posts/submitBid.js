@@ -24,9 +24,8 @@ export async function submitBid(id, bidAmount, token) {
     if (response.ok) {
       alert('Your bid is successfully placed!');
       const result = await response.json();
-      window.location.reload();
-
       console.log(result);
+      return result;
     } else {
       const errorResponse = await response.json();
       console.log('Failed to place your bid', errorResponse);
