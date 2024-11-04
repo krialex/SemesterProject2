@@ -32,6 +32,11 @@ h4::first-letter {
   margin-bottom: 0;
 }
 
+.bidder-name {
+  text-decoration: underline;
+  text-transform: capitalize;
+}
+
 @media (max-width: 600px) {
   .oneListing {
     flex-direction: column;

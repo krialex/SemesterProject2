@@ -34,6 +34,7 @@ export function buildHtmlForOneListing(listing, lastBid, lastBidder) {
                             <p>${listing.data.description}</p>
                             <br>
                             <hr>
+                            <br>
                             <div class="dateInfo">
                             <p><span class="infoOnListing">Created:</span> ${new Date(
                               listing.data.created,
@@ -50,7 +51,7 @@ export function buildHtmlForOneListing(listing, lastBid, lastBidder) {
       listingHTML += `<p><span class="infoOnListing">Current bids:</span> ${listing.data._count.bids}</p>`;
       if (lastBid) {
         listingHTML += `<div class="last-bid">
-                          <p><span class="infoOnListing">Last bid:</span> ${lastBid.amount} - made by ${lastBidder.name}</p>
+                          <p><span class="infoOnListing">Last bid:</span> ${lastBid.amount} - made by <span class="bidder-name">${lastBidder.name}</span></p>
                           <p><span class="infoOnListing">Bid placed on:</span> ${new Date(
                             lastBid.created,
                           ).toLocaleDateString('en-GB', {
