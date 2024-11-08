@@ -56,12 +56,6 @@ The project uses Prettier and ESLint to ensure code quality
 
 ## Links to the project
 
-Here is the link to my Trello board:
-
-```
-https://trello.com/b/YlS9E2Pb/semester-project2
-```
-
 Link to my design prototype:
 
 ```
@@ -72,6 +66,12 @@ Link to the style guide:
 
 ```
 https://styleguidee.netlify.app/
+```
+
+Link to hosted demo:
+
+```
+https://hammertimeee.netlify.app/
 ```
 
 ## Contact
