@@ -2,6 +2,7 @@ import { GET_BASE_URL, LISTINGS, API_KEY } from '../../api/constants.js';
 import { buildHtmlForOneListing } from './buildHtmlForOneListing.js';
 import { load } from '../../api/localeStorage/load.js';
 import { submitBid } from '../../events/posts/submitBid.js';
+import { showToast } from '../common/userFeedbackToast.js';
 
 export async function getListingById() {
   const urlParams = new URLSearchParams(window.location.search);
@@ -70,7 +71,7 @@ export async function getListingById() {
           }
         }
       } else {
-        alert('You must be logged in to place a bid');
+        showToast('You must be logged in to place a bid');
       }
     });
   } else {
