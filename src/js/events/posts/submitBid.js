@@ -20,12 +20,9 @@ export async function submitBid(id, bidAmount, token) {
       body: JSON.stringify(bidData),
     });
 
-    console.log(bidData);
-
     if (response.ok) {
       showToast('Your bid is successfully placed!');
       const result = await response.json();
-      console.log(result);
       return result;
     } else {
       const errorResponse = await response.json();
@@ -35,7 +32,7 @@ export async function submitBid(id, bidAmount, token) {
       );
     }
   } catch (error) {
-    console.log('An error has occurred', error);
     showToast('An error has occurred while placing the bid');
+    console.log(error);
   }
 }

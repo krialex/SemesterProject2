@@ -6,7 +6,6 @@ export async function getListings() {
     const respons = await fetch(apiUrl);
     const listingsJson = await respons.json();
 
-    console.log(listingsJson);
     return listingsJson;
   } catch (error) {
     console.log('can not fetch info from api', error);

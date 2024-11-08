@@ -4,5 +4,5 @@ export function showToast(message) {
   toast.className = 'toast show';
   setTimeout(() => {
     toast.className = toast.className.replace('show', '');
-  }, 5000);
+  }, 3000);
 }

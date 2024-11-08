@@ -26,11 +26,8 @@ export async function editProfilePic(event, avatarUrl) {
     });
 
     if (!response.ok) {
-      console.log('could not update avatar image for profile..');
       return;
     }
-
-    console.log('Avatar image updated successfully!');
   } catch (error) {
     console.log('editProfilePic function does not work..', error);
   }

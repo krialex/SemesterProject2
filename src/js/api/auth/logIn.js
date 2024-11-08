@@ -51,7 +51,6 @@ logInForm.addEventListener('submit', async (event) => {
   if (valueValid) {
     const email = userEmail.value;
     const password = userPassword.value;
-    console.log(email, password);
 
     try {
       await login(email, password);

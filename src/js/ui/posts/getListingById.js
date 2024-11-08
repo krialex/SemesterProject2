@@ -21,7 +21,6 @@ export async function getListingById() {
 
   if (response.ok) {
     const listing = await response.json();
-    console.log(listing);
 
     const lastBid =
       listing.data.bids?.length > 0
@@ -75,7 +74,7 @@ export async function getListingById() {
       }
     });
   } else {
-    console.log('Cant fetch listing by id');
+    showToast('Cant fetch this listing. Something went wrong');
     return null;
   }
 }

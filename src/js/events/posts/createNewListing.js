@@ -18,7 +18,6 @@ export async function createNewListing(listingData) {
       console.log('failed to create new listing..');
     }
     const item = response.json();
-    console.log('new item added to api');
     return item;
   } catch (error) {
     console.log('nothing was publiched', error);
